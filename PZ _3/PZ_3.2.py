@@ -8,5 +8,5 @@ try:
         print(b, a)
     else: #если числа равны
         print('Числа равны!')
-except ValueError:
+except ValueError: #Ошибка
     print('Ошибка!')
