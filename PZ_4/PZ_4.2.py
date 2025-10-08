@@ -1,12 +1,11 @@
-#Дано целое число N (> 0). Найти сумму 1^N + 2^N-1 + ... + N^n
+#Дано целое число N (> 0). Найти сумму 1^1 + 2^2 + ... + N^n
 
 try:
-    N = int(input("Введите целое число N (>0): "))
-    
-    s = 0
-    for i in range(1, N + 1):
-        s += i ** i   # прибавляем i^i к сумме
-        
-        print(f"Сумма 1^1 + 2^2 + ... + N^N при N={N}: {s}")
+    n = int(input('Введите n число '))
+    if n <= 0:
+        print("Ошибка: n должно быть больше 0")
+    else:
+        result = sum(i**i for i in range(1, n + 1))
+        print(result)
 except ValueError:
-    print('Ошибка!')
+    print("Ошибка!")
