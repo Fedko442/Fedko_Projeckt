@@ -8,3 +8,6 @@ try:
         print('Нет взаимнопротивоположных чисел')
 except ValueError: #Ошибка
     print('Ошибка!')
+
+
+print(a + b == 0 or a + c == 0 or b + c == 0)
