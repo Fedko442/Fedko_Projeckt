@@ -9,9 +9,10 @@ def digit_count_sum(k):
         total += temp % 10
         temp //= 10
         count += 1
-    print(f"Число: {k}, количество цифр: {count}, сумма цифр: {total}")
+    return count, total  # возвращаем два значения
 
-# Проверка:
+# Использование:
 numbers = [123, 4567, 89, 1000, 7]
 for n in numbers:
-    digit_count_sum(n)
+    cnt, sm = digit_count_sum(n)
+    print(f"Число: {n}, количество цифр: {cnt}, сумма цифр: {sm}")
