@@ -9,7 +9,7 @@ def digit_count_sum(k):
         total += temp % 10
         temp //= 10
         count += 1
-    return count, total  # возвращаем два значения
+    return count, total
 
 # Использование:
 numbers = [123, 4567, 89, 1000, 7]
