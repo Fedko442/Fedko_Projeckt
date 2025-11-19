@@ -1,20 +1,26 @@
 #Дан список размера N, все элементы которого, кроме одного, упорядочены по убыванию. 
 #Сделать список упорядоченным, переместив элемент, нарушающий упорядоченность, на новую позицию.
 
-import random
+def fix_list(lst):
+    n = len(lst)
+    if n <= 1:
+        return lst
 
-N = int(input("Введите количество элементов: "))
+    # Находим первый индекс, где нарушается убывание
+    for i in range(n - 1):
+        if lst[i] < lst[i + 1]:
+            # Нарушитель — это lst[i+1], потому что он больше предыдущего
+            val = lst.pop(i + 1)
+            # Вставляем его в правильное место (по убыванию)
+            j = 0
+            while j < len(lst) and lst[j] > val:
+                j += 1
+            lst.insert(j, val)
+            break
 
-if N <= 0:
-    print("Ошибка!")
+    return lst
 
-List = [random.randint(1,100) for _ in range(N)]
-
-lst = List.copy()
-
-lst.sort()
-
-lst.reverse()
-
-print(List)
-print(lst)
+# Тесты
+print(fix_list([10, 8, 6, 9, 4, 2])) 
+print(fix_list([7, 5, 3, 1, 4]))      
+print(fix_list([5, 4, 3, 2, 1]))      
