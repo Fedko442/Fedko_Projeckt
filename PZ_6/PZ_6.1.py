@@ -21,5 +21,7 @@ sum = 0
 for i in lst:
     sum += i
     
-print(sum)
-print(List)
+M = L - K
+num = sum / M
+print(f"Среднеарифметическое = {num}")
+print(f"Полученный список = {List}")

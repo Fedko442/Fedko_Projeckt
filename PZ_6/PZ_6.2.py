@@ -13,5 +13,5 @@ for i in List:
         max_count = count
         num = i
 
-print(f"Колличество повторений = {max_count}, Какое число воторяется больше всего = {num}")
+print(f"Колличество повторений = {max_count}, Какое число повторяется больше всего = {num}")
 print(List)
