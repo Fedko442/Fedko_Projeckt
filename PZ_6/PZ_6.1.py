@@ -12,7 +12,7 @@ elif K >= L:
 elif K == N or L == N:
     print('Ошибка!')
 
-List = [random.randint(1,100) for _ in range(N)]
+List = [random.randint(1,4) for _ in range(N)]
 
 lst = List[K:L]
 
