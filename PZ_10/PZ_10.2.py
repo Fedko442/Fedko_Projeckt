@@ -17,22 +17,9 @@ upper_count = sum(1 for symbol in text if symbol.isalpha() and symbol.isupper())
 print("\nКоличество букв в верхнем регистре:", upper_count)
 
 # 3. Формирование стихотворной формы
+
 # Разбиваем текст на слова
-words = text.split()
-
-# Формируем строки по 5 слов (как "стих")
-poem_lines = []
-line = ""
-
-for i, word in enumerate(words, 1):
-    line += word + " "
-    if i % 5 == 0:
-        poem_lines.append(line.strip())
-        line = ""
-
-# если остались слова
-if line:
-    poem_lines.append(line.strip())
+poem_lines = text.splitlines()
 
 # Автор и название
 author = "А.С. Пушкин"
