@@ -3,13 +3,11 @@
 
 import string
 
-text = "In PyCharm, you can specify third-party standalone applications and run them as External Tools"
+text = input("Введите строку: ")
 
-result = ""
+# Оставляем только символы нижнего регистра
+lowercase_chars = ''.join(
+    filter(lambda ch: ch in string.ascii_lowercase, text)
+)
 
-for ch in text:
-    if ch in string.ascii_lowercase:
-        result += ch
-
-print("Символы нижнего регистра:")
-print(result)
+print("Символы нижнего регистра:", lowercase_chars)
