@@ -5,9 +5,6 @@
 
 class Employee:
 
-    def __init__(self, name):
-        self.name = name
-
     def work(self):
         print(self.name, "работает")
 
@@ -17,13 +14,21 @@ class Employee:
 
 class Manager(Employee):
 
+    def __init__(self, name):
+        self.name = name
+
     def manage_team(self):
         print(self.name, "управляет командой")
 
+
 class Engineer(Employee):
+
+    def __init__(self, name):
+        self.name = name
 
     def design_systems(self):
         print(self.name, "проектирует системы")
+
 
 manager = Manager("Иван")
 engineer = Engineer("Петр")
