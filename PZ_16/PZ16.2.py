@@ -1,9 +1,12 @@
 #Создание базового класса «Работник» и его наследование для создания классов «Менеджер» и «Инженер». 
 # В классе «Работник» будут общие методы, такие как «работать» и «получать зарплату», 
-# а классы-наследники будут иметь свои уникальные методы и свойства, 
+# а классы-наследники будут иметь свои методы, 
 # такие как «управлять командой» и «проектировать системы».
 
 class Employee:
+
+    def __init__(self, name):
+        self.name = name
 
     def work(self):
         print(self.name, "работает")
@@ -15,7 +18,7 @@ class Employee:
 class Manager(Employee):
 
     def __init__(self, name):
-        self.name = name
+        super().__init__(name)
 
     def manage_team(self):
         print(self.name, "управляет командой")
@@ -24,7 +27,7 @@ class Manager(Employee):
 class Engineer(Employee):
 
     def __init__(self, name):
-        self.name = name
+        super().__init__(name)
 
     def design_systems(self):
         print(self.name, "проектирует системы")
